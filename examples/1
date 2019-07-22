@@ -1,0 +1,4 @@
+(define (N) 10)
+(define (fibNimpl pprev prev n) (if (= n 0) null (cons (+ pprev prev) (fibNimpl prev (+ pprev prev) (- n 1)))))
+(define (fibN n) (cons 1 (cons 1 (fibNimpl 1 1 (- n 2)))))
+(fibN (N))
