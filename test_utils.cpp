@@ -1,5 +1,8 @@
 #include "test_utils.h"
 
+#include <tuple>
+#include <cstring>
+
 extern "C" {
 #include "function_pool.h"
 }
