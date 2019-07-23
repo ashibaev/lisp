@@ -45,7 +45,7 @@ DEFINE_ONE_SYMBOL_READER(Operation, 8, "+-*/%<>=")
 
 DEFINE_CHECK_SYMBOL(
         Number,
-        isdigit(*input) || *input == '-' && isdigit(*(input + 1)),
+        isdigit(*input) || (*input == '-' && isdigit(*(input + 1))),
         isdigit(*input)
 )
 

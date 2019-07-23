@@ -1,6 +1,8 @@
 #include <string.h>
 #include <stdbool.h>
 #include "stream_reader.h"
+#include "utils.h"
+
 
 size_t next_position(size_t position, size_t cnt) {
     size_t next = position + cnt;
@@ -34,7 +36,7 @@ bool read_tokens(struct TokenStreamReader* reader) {
     for (char const * current_pos = buffer; current_pos && *current_pos;) {
         current_pos = read_token(add_token(reader), current_pos);
     }
-    fscanf(reader->file, "%*[^-+*=<>%//0-9a-zA-Z()]");
+    IGNORE_RESULT(fscanf(reader->file, "%*[^-+*=<>%//0-9a-zA-Z()]"));
     return true;
 }
 

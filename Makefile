@@ -6,7 +6,8 @@ LDFLAGS=$(FLAGS) -lm -lpthread
 
 MAIN=lisp_machine.c
 MAIN_OBJECT=lisp_machine.o
-SOURCES=function_pool.c object.c simple_functions.c vector.c init.c token.c objectio.c state.c stream_reader.c runner.c
+SOURCES=utils.c function_pool.c object.c simple_functions.c vector.c init.c \
+	token.c objectio.c state.c stream_reader.c runner.c
 OBJECTS=$(SOURCES:.c=.o)
 TEST_SOURCES=test_main.cpp function_pool_ut.cpp simple_functions_ut.cpp \
             object_ut.cpp token_ut.cpp objectio_ut.cpp state_ut.cpp test_utils.cpp
