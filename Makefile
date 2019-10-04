@@ -34,3 +34,6 @@ check: $(OBJECTS) $(TEST_OBJECTS)
 
 .cpp.o:
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+kek:
+	ls
