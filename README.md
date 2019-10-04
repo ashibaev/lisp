@@ -10,7 +10,7 @@
 
 `make LD=g++ CC=gcc CXX=g++ WARN_OPTS="-pedantic -Wall" FLAGS="-O2"`
 
-# Usage:
+# Usage
 
 Run tests: `./check`
 
